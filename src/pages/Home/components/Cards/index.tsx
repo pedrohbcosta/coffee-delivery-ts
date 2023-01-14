@@ -1,35 +1,54 @@
 import { Minus, Plus, ShoppingCart } from 'phosphor-react';
-import Expresso from './assets/Expresso.svg';
-import { CardContainer, ProductPriceAndButton } from './styles';
+import { useQuery } from 'react-query';
+import { formatCurrency } from '../../../../components/formatCurrency';
+import { CardContainer, ProductPriceAndButton, Tags } from './styles';
 
-import storeItems from '../../../../data/items.json'
-import { StoreItem } from '../../../../components/StoreItem';
-
-interface CardsContainerProps {
+export interface Coffee {
+  id: number;
   name: string;
-  tag: string;
+  tags: string[];
   description: string;
   price: number;
   imgUrl: string | undefined;
+  amount: number;
+}
+
+interface CardsContainerProps {
+  coffee: Coffee
 }
 
 
-export function CardsContainer(storeItems: CardsContainerProps) {
+const handleAddToCart = (clickItem: Coffee) => null;
+
+export function CardsContainer( { coffee }: CardsContainerProps) {
+
+  
+
   return (
     <CardContainer>
-      <img src={ storeItems.imgUrl } alt="" />
-      <p className='ProductTag'>{storeItems.tag}</p>
-      <h1 className='ProductName'>{storeItems.name}</h1>
-      <p className='ProductDescription'>{storeItems.description}</p>
+      <img src={ coffee.imgUrl } alt="" />
+      
+      <Tags>
+        {coffee.tags.map((tag) => (
+          <span key={`${coffee.id}${tag}`}>{tag}</span>
+        ))}
+      </Tags>
+      <h1 className='ProductName'>{coffee.name}</h1>
+      <p className='ProductDescription'>{coffee.description}</p>
       <ProductPriceAndButton>
-        <p className='ProductPrice'>{storeItems.price}</p> 
+        <p className='ProductPrice'>{formatCurrency(coffee.price)}</p> 
         
           <div className='ProductsToCart'>
             <button className='ProductMinusButton'>
               <Minus size={12} color="#8047f8" weight="bold" />
             </button>
 
-            <span className='ProductQuantity'>2</span>
+            <input 
+              className='ProductQuantity' 
+              type="number" 
+              readOnly 
+              value={1}
+            />
 
             <button className='ProductAddButton'>
               <Plus size={12} color="#8047f8" weight="bold" />

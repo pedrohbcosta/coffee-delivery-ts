@@ -1,12 +1,26 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react';
 import HeroCoffee from '../../assets/HeroCoffee.svg';
+import { coffees } from '../../data/coffees';
 
-import storeItems from '../../data/items.json'
 
 import { CardsContainer } from './components/Cards';
-import { BulletsSection, HeroSection, HeroSectionText, HomeContainer, MainSection, ProductsContainer } from './styles';
+
+import { 
+  BulletsSection, 
+  HeroSection, 
+  HeroSectionText, 
+  HomeContainer, 
+  MainSection, 
+  ProductsContainer 
+} from './styles';
 
 export function Home() {
+  
+  // const getProducts = storeItems
+  
+  // const { data } = useQuery('products', getProducts)
+
+
   return (
     <HomeContainer>
       <HeroSection>
@@ -34,15 +48,11 @@ export function Home() {
         <h1>Nossos cafés</h1>
 
         <ProductsContainer>
-          {storeItems.map(store => {
+          {coffees.map(coffee => {
             return (
               <CardsContainer  
-                key={store.id}
-                name={store.name}
-                tag={store.tag}
-                description={store.description}
-                price={store.price}
-                imgUrl={store.imgUrl}
+                key={coffee.id}
+                coffee={coffee}
               />
             )
           })}

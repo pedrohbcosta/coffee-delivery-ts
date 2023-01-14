@@ -6,7 +6,6 @@ export const CardContainer = styled.div`
   background: ${props => props.theme['base-card']};
   border-radius: 6px 36px;
 
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +16,7 @@ export const CardContainer = styled.div`
     width: 6.25rem;
   }
 
-  .ProductTag {
+  /* .ProductTag {
     font-style: bold;
     font-size: 0.625rem;
     line-height: 1.3;
@@ -28,7 +27,7 @@ export const CardContainer = styled.div`
     border-radius: 8px;
     padding: .2rem;
     margin-top: .75rem;
-  }
+  } */
 
   .ProductName {
     font-family: 'Baloo 2',cursive;
@@ -50,6 +49,19 @@ export const CardContainer = styled.div`
     text-align: center;
     margin: 0.5rem 1.25rem 0 0.5rem ;
   }
+`;
+
+export const Tags = styled.div`
+  font-style: bold;
+  font-size: 0.625rem;
+  line-height: 1.3;
+  color: ${props => props.theme['yellow-dark']};
+  background: ${props => props.theme['yellow-light']};
+
+  height: 1.2rem;
+  border-radius: 8px;
+  padding: .2rem;
+  margin-top: .75rem;
 `;
 
 export const ProductPriceAndButton = styled.div`
@@ -78,6 +90,19 @@ export const ProductPriceAndButton = styled.div`
     background: ${props => props.theme['base-button']};
   }
 
+  .ProductQuantity {
+    flex: 1;
+    background: ${props => props.theme['base-button']};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+    width: 100%;
+    border: none;
+  }
+
   .ProductMinusButton,
   .ProductAddButton {
     border: 0;
@@ -90,6 +115,8 @@ export const ProductPriceAndButton = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    border-radius: 6px;
   }
 
   .ShoppingCartCard {
