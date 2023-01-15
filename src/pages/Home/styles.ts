@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HomeContainer = styled.main`
   padding: 5.875rem;
   width: 100%;
+  /* margin-bottom: 9.6rem; */
 `;
 
 export const HeroSection = styled.section`
@@ -13,8 +14,8 @@ export const HeroSection = styled.section`
     font-size: 3rem;
     font-weight: 800;
     line-height: 1.3;
-    color: ${props => props.theme['base-title']};
-
+    color: ${props => props.theme.colors['base-title']};
+    
     margin-bottom: 1rem;
   }
 
@@ -22,16 +23,14 @@ export const HeroSection = styled.section`
     font-size: 1.25rem;
     line-height: 1.3;
     font-weight: 400;
-    color: ${props => props.theme['base-subtitle']};
+    color: ${props => props.theme.colors['base-subtitle']};
 
     margin-bottom: 3rem;
-    padding-right: 5rem;
   }
 `;
 
 export const HeroSectionText = styled.section`
-  width: 50%;
-  margin-right: 6.5rem;
+  margin-right: 4rem;
 `;
 
 export const BulletsSection = styled.section`
@@ -45,8 +44,8 @@ export const BulletsSection = styled.section`
 
   .ShoppingCart {
     svg {
-      background: ${props => props.theme['yellow-dark']};
-      color: ${props => props.theme['white']};
+      background: ${props => props.theme.colors['brand-yellow-dark']};
+      color: ${props => props.theme.colors['base-white']};
       border-radius: 50%;
       padding: 0.4rem;
     }
@@ -54,8 +53,8 @@ export const BulletsSection = styled.section`
 
   .Timer {
     svg {
-      background: ${props => props.theme['yellow']};
-      color: ${props => props.theme['white']};
+      background: ${props => props.theme.colors['brand-yellow']};
+      color: ${props => props.theme.colors['base-white']};
       border-radius: 50%;
       padding: 0.4rem;
     }
@@ -63,8 +62,8 @@ export const BulletsSection = styled.section`
 
   .Package {
     svg {
-      background: ${props => props.theme['base-text']};
-      color: ${props => props.theme['white']};
+      background: ${props => props.theme.colors['base-text']};
+      color: ${props => props.theme.colors['base-white']};
       border-radius: 50%;
       padding: 0.4rem;
     }
@@ -72,8 +71,8 @@ export const BulletsSection = styled.section`
 
   .Coffee {
     svg {
-      background: ${props => props.theme['purple']};
-      color: ${props => props.theme['white']};
+      background: ${props => props.theme.colors['brand-purple']};
+      color: ${props => props.theme.colors['base-white']};
       border-radius: 50%;
       padding: 0.4rem;
     }
@@ -98,7 +97,7 @@ export const MainSection = styled.section`
   h1 {
     font-family: 'Baloo 2',cursive;
     font-size: 2rem;
-    color: ${props => props.theme['base-subtitle']};
+    color: ${props => props.theme.colors['base-subtitle']};
     margin-bottom: 3.375rem;
   }
 `;

@@ -3,9 +3,16 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 5.875rem;
-  padding-right: 10rem;
+  justify-content: center;
+  background: ${(props) => props.theme.colors['base-background']};
+  height: 6.5rem;
+  width: 100%;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   nav {
     display: flex;
@@ -20,8 +27,8 @@ export const HeaderContainer = styled.header`
       align-items: center;
       justify-content: center;
       
-      color: ${props => props.theme['yellow-dark']};
-      background: ${props => props.theme['yellow-light']};
+      color: ${props => props.theme.colors['brand-yellow-dark']};
+      background: ${props => props.theme.colors['brand-yellow-light']};
     }
   }
 `
@@ -39,6 +46,6 @@ export const CityBox = styled.div`
       font-size: 0.875rem;
       line-height: 1.3;
       
-      color: ${props => props.theme['purple-dark']};
-      background: ${props => props.theme['purple-light']};
+      color: ${props => props.theme.colors['brand-purple-dark']};
+      background: ${props => props.theme.colors['brand-purple-light']};
 `;

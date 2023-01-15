@@ -2,8 +2,8 @@ import { CheckoutContainer, CompleteRequest, ProductsSelected } from "./styles";
 
 export function Checkout() {
   return (
-    <CheckoutContainer className="container">
-      
+    <CheckoutContainer>
+      <h1>hello</h1>
     </CheckoutContainer>
   )
 }

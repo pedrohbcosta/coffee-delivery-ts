@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   height: 19.375rem;
   width: 16rem;
-  background: ${props => props.theme['base-card']};
+  background: ${props => props.theme.colors['base-card']};
   border-radius: 6px 36px;
 
   display: flex;
@@ -20,8 +20,8 @@ export const CardContainer = styled.div`
     font-style: bold;
     font-size: 0.625rem;
     line-height: 1.3;
-    color: ${props => props.theme['yellow-dark']};
-    background: ${props => props.theme['yellow-light']};
+    color: ${props => props.theme.colors['brand-yellow-dark']};
+    background: ${props => props.theme.colors['brand-yellow-light']};
 
     height: 1.2rem;
     border-radius: 8px;
@@ -33,7 +33,7 @@ export const CardContainer = styled.div`
     font-family: 'Baloo 2',cursive;
     font-size: 1.25rem;
     line-height: 1.3;
-    color: ${props => props.theme['base-subtitle']};
+    color: ${props => props.theme.colors['base-subtitle']};
     margin-top: 1rem;
     margin-bottom: 0;
   }
@@ -55,8 +55,8 @@ export const Tags = styled.div`
   font-style: bold;
   font-size: 0.625rem;
   line-height: 1.3;
-  color: ${props => props.theme['yellow-dark']};
-  background: ${props => props.theme['yellow-light']};
+  color: ${props => props.theme.colors['brand-yellow-dark']};
+  background: ${props => props.theme.colors['brand-yellow-light']};
 
   height: 1.2rem;
   border-radius: 8px;
@@ -74,7 +74,7 @@ export const ProductPriceAndButton = styled.div`
     font-family: 'Baloo 2',cursive;
     font-size: 1.5rem;
     line-height: 1.3;
-    color: ${props => props.theme['base-subtitle']};
+    color: ${props => props.theme.colors['base-subtitle']};
 
     margin-right: 1.5rem;
   }
@@ -87,12 +87,12 @@ export const ProductPriceAndButton = styled.div`
     width: 4.5rem;
     height: 2.375rem;
     border-radius: 6px;
-    background: ${props => props.theme['base-button']};
+    background: ${props => props.theme.colors['base-button']};
   }
 
   .ProductQuantity {
     flex: 1;
-    background: ${props => props.theme['base-button']};
+    background: ${props => props.theme.colors['base-button']};
 
     display: flex;
     align-items: center;
@@ -106,7 +106,7 @@ export const ProductPriceAndButton = styled.div`
   .ProductMinusButton,
   .ProductAddButton {
     border: 0;
-    background: ${props => props.theme['base-button']};
+    background: ${props => props.theme.colors['base-button']};
     cursor: pointer;
 
     width: 1.8rem;
@@ -120,7 +120,7 @@ export const ProductPriceAndButton = styled.div`
   }
 
   .ShoppingCartCard {
-    background: ${props => props.theme['purple-dark']};
+    background: ${props => props.theme.colors['brand-purple-dark']};
     border: 0;
     border-radius: 6px;
     margin-left: .5rem;
@@ -144,9 +144,7 @@ export const ProductQuantity = styled.button`
 
   border: 0;
   border-radius: 6px;
-  background: ${props => props.theme['base-button']};
+  background: ${props => props.theme.colors['base-button']};
 
   margin: 1rem;
-
-  
 `;

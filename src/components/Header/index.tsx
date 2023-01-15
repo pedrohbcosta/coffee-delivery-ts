@@ -8,20 +8,22 @@ import { ShoppingCart, MapPin } from 'phosphor-react'
 export function Header() {
   return (
     <HeaderContainer>
-      <NavLink to="/" title='Página Inicial'>
-        <img src= { LogoCoffeeDelivery } alt="" />
-      </NavLink>
-      <nav>
-        
-        <CityBox>
-          <MapPin size={24} color="#8047f8" weight="fill" /> 
-            Caratinga, MG 
-        </CityBox>
-        
-        <NavLink to="/checkout" title='Carrinho'>
-          <ShoppingCart size={24}/>
+      <div className='container'>
+        <NavLink to="/" title='Página Inicial'>
+          <img src= { LogoCoffeeDelivery } alt="" />
         </NavLink>
-      </nav>
+        <nav>
+          
+          <CityBox>
+            <MapPin size={20} color="#8047f8" weight="fill" /> 
+              Porto Alegre, RS 
+          </CityBox>
+          
+          <NavLink to="/checkout" title='Carrinho'>
+            <ShoppingCart size={20} weight="fill"/>
+          </NavLink>
+        </nav>
+      </div>
     </HeaderContainer>
   )
 }

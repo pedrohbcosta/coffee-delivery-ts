@@ -23,42 +23,44 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <HeroSection>
-        <HeroSectionText>
-          <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-          <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
+      <div className='container'>
+        <HeroSection>
+          <HeroSectionText>
+            <h1>Encontre o café perfeito para qualquer hora do dia</h1>
+            <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
+            
+            <BulletsSection>
+              <ul>
+                <li className='ShoppingCart'><ShoppingCart color="#ffffff" weight="fill" /> Compra simples e segura</li>
+                <li className='Timer'><Timer color="#ffffff" weight="fill" /> Entrega rápida e rastreada</li>
+              </ul>
+              <ul>
+                <li className='Package'><Package color="#ffffff" weight="fill" /> Embalagem mantém o café intacto</li>
+                <li className='Coffee'><Coffee color="#ffffff" weight="fill" /> O café chega fresquinho até você</li>
+              </ul>
+            </BulletsSection>
+            
+          </HeroSectionText>
           
-          <BulletsSection>
-            <ul>
-              <li className='ShoppingCart'><ShoppingCart color="#ffffff" weight="fill" /> Compra simples e segura</li>
-              <li className='Timer'><Timer color="#ffffff" weight="fill" /> Entrega rápida e rastreada</li>
-            </ul>
-            <ul>
-              <li className='Package'><Package color="#ffffff" weight="fill" /> Embalagem mantém o café intacto</li>
-              <li className='Coffee'><Coffee color="#ffffff" weight="fill" /> O café chega fresquinho até você</li>
-            </ul>
-          </BulletsSection>
-          
-        </HeroSectionText>
+          <img src={ HeroCoffee } alt="" />
+        </HeroSection>
+
+        <MainSection>
+          <h1>Nossos cafés</h1>
+
+          <ProductsContainer>
+            {coffees.map(coffee => {
+              return (
+                <CardsContainer  
+                  key={coffee.id}
+                  coffee={coffee}
+                />
+              )
+            })}
+          </ProductsContainer>
         
-        <img src={ HeroCoffee } alt="" />
-      </HeroSection>
-
-      <MainSection>
-        <h1>Nossos cafés</h1>
-
-        <ProductsContainer>
-          {coffees.map(coffee => {
-            return (
-              <CardsContainer  
-                key={coffee.id}
-                coffee={coffee}
-              />
-            )
-          })}
-        </ProductsContainer>
-      
-      </MainSection>
+        </MainSection>
+      </div>
     </HomeContainer>
   )
 }

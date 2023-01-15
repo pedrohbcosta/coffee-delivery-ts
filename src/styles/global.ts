@@ -7,31 +7,23 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  :focus {
-    outline: none;
-    box-shadow: 0 0 0 2px ${(props) => props.theme['base-hover']};
-  }
-
   body {
-    background: ${(props) => props.theme['background']};
-    color: ${(props) => props.theme['base-text']};
+    background: ${(props) => props.theme.colors['base-background']};
+    color: ${(props) => props.theme.colors['base-text']};
     -webkit-font-smoothing: antialiased;
   }
 
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   body, input, textarea, button {
-    font-family: 'Baloo 2', cursive;
-    font-family: 'Roboto', sans-serif;
+    font-family: ${(props) => props.theme.fonts.regular};
     font-weight: 400;
-    font-size: 1rem;
-  }
-
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  input[type="number"] {
-    -moz-appearance: textfield;
+    font-size: ${(props) => props.theme.textSizes['text-regular-m']};
   }
 `

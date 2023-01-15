@@ -56,7 +56,7 @@ export function CardsContainer( { coffee }: CardsContainerProps) {
           </div>
         
           <button type='submit' className='ShoppingCartCard'>
-            <ShoppingCart size={32} color="#ffffff" weight="fill" />
+            <ShoppingCart size={22} color="#ffffff" weight="fill" />
           </button>
         
       </ProductPriceAndButton>
