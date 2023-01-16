@@ -1,3 +1,4 @@
+import { CartCard } from "./components/CartCard";
 import { CartItemsContainer, CartItemsContainerTitle } from "./styles";
 
 export function CartItems() {
@@ -8,7 +9,7 @@ export function CartItems() {
       </CartItemsContainerTitle>
       
       <CartItemsContainer>
-        <h1>Café Selecionados</h1>
+        <CartCard />
       </CartItemsContainer>
     </div>
   )
