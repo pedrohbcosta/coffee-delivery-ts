@@ -1,17 +1,41 @@
-import { MapPin } from "phosphor-react";
-import { CepInput, CityInput, ComplementInput, DeliverySubText, DeliveryText, FormContainer, FormHeader, LocalInput, NumberInput, PaymentContainer, StateInput, StreetInput } from "./styles";
+import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from "phosphor-react";
+
+import { 
+  CashContainer,
+  CepInput, 
+  CityInput, 
+  ComplementInput, 
+  CreditCardContainer, 
+  DebitCardContainer, 
+  FormContainer, 
+  FormContainerTitle, 
+  FormHeader, 
+  LocalInput, 
+  NumberInput, 
+  PaymentContainer, 
+  PaymentHeader, 
+  PaymentTypesContainer, 
+  StateInput, 
+  StreetInput 
+} from "./styles";
 
 export function CompleteOrderContainer() {
   return (
     <div>
+      <FormContainerTitle>
+        Complete seu pedido
+      </FormContainerTitle>
       <FormContainer>
+
         <FormHeader>
-          <MapPin/>
-          <DeliveryText/> Endereço de Entrega
-          <DeliverySubText/> Informe o endereço onde deseja receber seu pedido
+          <MapPin size={22}/>
+            <div>
+              <p className="title">Endereço de Entrega</p>
+              <p className="subtitle">Informe o endereço onde deseja receber seu pedido</p>
+            </div>
         </FormHeader>
         
-          <CepInput placeholder="CEP"/>
+        <CepInput placeholder="CEP"/>
         <StreetInput placeholder="Nome"/>
         <NumberInput placeholder="Número"/>
         <ComplementInput placeholder="Complemento"/>
@@ -19,8 +43,33 @@ export function CompleteOrderContainer() {
         <CityInput placeholder="Cidade"/>
         <StateInput placeholder="UF"/>
       </FormContainer>
+
       <PaymentContainer>
-        <h3>Pagamentos</h3>
+        
+        <PaymentHeader>
+          <CurrencyDollar size={22}/>
+          <div>
+            <p className="title">Endereço de Entrega</p>
+            <p className="subtitle">Informe o endereço onde deseja receber seu pedido</p>
+          </div>
+        </PaymentHeader>
+
+        <PaymentTypesContainer>
+          <CreditCardContainer>
+            <CreditCard size={16} />
+            CARTÃO DE CRÉDITO
+          </CreditCardContainer>
+          
+          <DebitCardContainer>
+            <Bank size={16} />
+            CARTÃO DE DÉBITO
+          </DebitCardContainer>
+          
+          <CashContainer>
+            <Money size={16} />
+            DINHEIRO
+          </CashContainer>
+        </PaymentTypesContainer>
       </PaymentContainer>
     </div>
   )
