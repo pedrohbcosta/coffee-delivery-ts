@@ -16,19 +16,6 @@ export const CardContainer = styled.div`
     width: 6.25rem;
   }
 
-  /* .ProductTag {
-    font-style: bold;
-    font-size: 0.625rem;
-    line-height: 1.3;
-    color: ${props => props.theme.colors['brand-yellow-dark']};
-    background: ${props => props.theme.colors['brand-yellow-light']};
-
-    height: 1.2rem;
-    border-radius: 8px;
-    padding: .2rem;
-    margin-top: .75rem;
-  } */
-
   .ProductName {
     font-family: 'Baloo 2',cursive;
     font-size: 1.25rem;

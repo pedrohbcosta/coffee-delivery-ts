@@ -31,12 +31,35 @@ export function Home() {
             
             <BulletsSection>
               <ul>
-                <li className='ShoppingCart'><ShoppingCart color="#ffffff" weight="fill" /> Compra simples e segura</li>
-                <li className='Timer'><Timer color="#ffffff" weight="fill" /> Entrega rápida e rastreada</li>
+                <li 
+                className='ShoppingCart'><ShoppingCart 
+                color="#ffffff" 
+                weight="fill" /> 
+                  Compra simples e segura
+                </li>
+                
+                <li 
+                className='Timer'><Timer 
+                color="#ffffff" 
+                weight="fill" /> 
+                  Entrega rápida e rastreada
+                </li>
               </ul>
+              
               <ul>
-                <li className='Package'><Package color="#ffffff" weight="fill" /> Embalagem mantém o café intacto</li>
-                <li className='Coffee'><Coffee color="#ffffff" weight="fill" /> O café chega fresquinho até você</li>
+                <li 
+                className='Package'><Package 
+                color="#ffffff" 
+                weight="fill" /> 
+                  Embalagem mantém o café intacto
+                </li>
+                
+                <li 
+                className='Coffee'><Coffee 
+                color="#ffffff" 
+                weight="fill" /> 
+                  O café chega fresquinho até você
+                </li>
               </ul>
             </BulletsSection>
             

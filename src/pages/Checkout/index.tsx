@@ -1,9 +1,12 @@
-import { CheckoutContainer, CompleteRequest, ProductsSelected } from "./styles";
+import { CartItems } from "./components/CartItems";
+import { CompleteOrderContainer } from "./components/completeOrderForm";
+import { CheckoutContainer } from "./styles";
 
 export function Checkout() {
   return (
-    <CheckoutContainer>
-      <h1>hello</h1>
+    <CheckoutContainer className="container">
+      <CompleteOrderContainer/>
+      <CartItems/>
     </CheckoutContainer>
   )
 }

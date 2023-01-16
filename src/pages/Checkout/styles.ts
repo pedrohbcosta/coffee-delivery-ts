@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-export const CheckoutContainer = styled.form`
-  margin-top: 2.5rem;
+export const CheckoutContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   gap: 2rem;
 `;
-
-export const CompleteRequest = styled.div``;
-
-export const ProductsSelected = styled.div``;

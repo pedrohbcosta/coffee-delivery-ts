@@ -1,6 +1,8 @@
 import { Minus, Plus, ShoppingCart } from 'phosphor-react';
+import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { formatCurrency } from '../../../../components/formatCurrency';
+import { coffees } from '../../../../data/coffees';
 import { CardContainer, ProductPriceAndButton, Tags } from './styles';
 
 export interface Coffee {
@@ -18,11 +20,21 @@ interface CardsContainerProps {
 }
 
 
-const handleAddToCart = (clickItem: Coffee) => null;
+
 
 export function CardsContainer( { coffee }: CardsContainerProps) {
 
-  
+  const [ cartItem, setCartItem ] = useState([])
+
+  const cartQuantity = cartItem.length
+
+  function handleAddToCart(event: any) {
+    const newAdd = coffees.find((coffee) => coffee.id)
+
+    // setCartItem([...cartItem, newAdd]);
+    // console.log(cartItem)
+    console.log(newAdd)
+  };
 
   return (
     <CardContainer>
@@ -48,10 +60,13 @@ export function CardsContainer( { coffee }: CardsContainerProps) {
               type="number" 
               readOnly 
               value={1}
-            />
+            />{cartQuantity}
 
-            <button className='ProductAddButton'>
-              <Plus size={12} color="#8047f8" weight="bold" />
+            <button 
+              key={coffee.id}
+              onClick={handleAddToCart} 
+              className='ProductAddButton'>
+                <Plus size={12} color="#8047f8" weight="bold" />
             </button> 
           </div>
         
