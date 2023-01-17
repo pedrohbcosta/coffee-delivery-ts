@@ -28,10 +28,20 @@ export function CardsContainer( { coffee }: CardsContainerProps) {
 
   const cartQuantity = cartItem.length
 
-  function handleAddToCart(event: any) {
-    const newAdd = coffees.find((coffee) => coffee.id)
+  function handleAddToCart(coffeeID: number) {
+    // const newAdd = coffees.find((coffee) => coffee.id)
+    const allCoffes = coffees.map(( coffee ) => {
+      if (coffee.id === coffeeID) {
+        return {
+          ...coffee
+        }
+      }
+      return coffee.id;
+    })
 
-    // setCartItem([...cartItem, newAdd]);
+    const newAdd = allCoffes
+
+    setCartItem([/*...cartItem,*/ newAdd]);
     // console.log(cartItem)
     console.log(newAdd)
   };
