@@ -23,29 +23,7 @@ export const AddressFormContainer = styled.div`
   grid-auto-flow: dense;
 `;
 
-export const FormHeader = styled.div`
-  margin-bottom: 2rem;
-  display: flex;
 
-  svg {
-      color: ${(props) => props.theme.colors['brand-yellow-dark']};
-    }
-
-  > div {
-    margin-left: .5rem;
-
-    .title {
-      font-size: ${(props) => props.theme.textSizes['text-regular-m']};
-      color: ${(props) => props.theme.colors['base-subtitle']};
-      line-height: 1.3;
-    }
-
-    .subtitle {
-      font-size: ${(props) => props.theme.textSizes['text-regular-s']};
-      color: ${(props) => props.theme.colors['base-text']};
-    }
-  }
-`;
 
 const BaseInput = styled.input`
   margin-bottom: 1rem;

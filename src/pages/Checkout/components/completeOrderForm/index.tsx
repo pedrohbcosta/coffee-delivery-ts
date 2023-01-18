@@ -6,21 +6,12 @@ import { AddressForm } from "./AddressForm";
 
 import { 
   CashContainer,
-  CepInput, 
-  CityInput, 
-  ComplementInput, 
   CompleteOrderFormContainer, 
   CreditCardContainer, 
   DebitCardContainer, 
   FormContainer, 
-  FormHeader, 
-  LocalInput, 
-  NumberInput, 
   PaymentContainer, 
-  PaymentHeader, 
   PaymentTypesContainer, 
-  StateInput, 
-  StreetInput 
 } from "./styles";
 
 export function CompleteOrderContainer() {
