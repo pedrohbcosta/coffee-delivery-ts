@@ -1,17 +1,14 @@
-import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from "phosphor-react";
+import { CurrencyDollar, MapPin } from "phosphor-react";
 import { useTheme } from "styled-components";
 import { TitleText } from "../../../../components/Typograph";
 import { SectionTitle } from "../SectionTitle";
 import { AddressForm } from "./AddressForm";
+import { PaymentTypes } from "./PaymentTypes";
 
 import { 
-  CashContainer,
   CompleteOrderFormContainer, 
-  CreditCardContainer, 
-  DebitCardContainer, 
   FormContainer, 
   PaymentContainer, 
-  PaymentTypesContainer, 
 } from "./styles";
 
 export function CompleteOrderContainer() {
@@ -24,6 +21,7 @@ export function CompleteOrderContainer() {
         <TitleText size="xs" color="subtitle">
           Complete seu pedido
         </TitleText>
+        
         <FormContainer>
 
           <SectionTitle
@@ -34,13 +32,6 @@ export function CompleteOrderContainer() {
           
           <AddressForm/>
 
-          {/* <CepInput placeholder="CEP"/>
-          <StreetInput placeholder="Nome"/>
-          <NumberInput placeholder="Número"/>
-          <ComplementInput placeholder="Complemento"/>
-          <LocalInput placeholder="Bairro"/>
-          <CityInput placeholder="Cidade"/>
-          <StateInput placeholder="UF"/> */}
         </FormContainer>
 
         <PaymentContainer>
@@ -51,23 +42,10 @@ export function CompleteOrderContainer() {
             icon={<CurrencyDollar color={colors["brand-purple"]} size={22}/>}
           />
 
-          <PaymentTypesContainer>
-            <CreditCardContainer>
-              <CreditCard size={16} />
-              CARTÃO DE CRÉDITO
-            </CreditCardContainer>
-            
-            <DebitCardContainer>
-              <Bank size={16} />
-              CARTÃO DE DÉBITO
-            </DebitCardContainer>
-            
-            <CashContainer>
-              <Money size={16} />
-              DINHEIRO
-            </CashContainer>
-          </PaymentTypesContainer>
+          <PaymentTypes/>
+
         </PaymentContainer>
+      
       </CompleteOrderFormContainer>
     
   )

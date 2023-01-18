@@ -5,7 +5,7 @@ export const CheckoutContainer = styled.div`
   gap: 2rem;
 `;
 
-export const SectionBaseStyle = styled.div`
+export const SelectionBaseStyle = styled.div`
   width: 100%;
   background: ${(props) => props.theme.colors["base-card"]};
   border-radius: 6px;
