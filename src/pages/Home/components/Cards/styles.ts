@@ -1,137 +1,96 @@
 import styled from "styled-components";
+import { RegularText, TitleText } from "../../../../components/Typograph";
 
 export const CardContainer = styled.div`
-  height: 19.375rem;
-  width: 16rem;
-  background: ${props => props.theme.colors['base-card']};
-  border-radius: 6px 36px;
-
+  width: 100%;
+  background: ${({ theme }) => theme.colors["base-card"]};
+  border-radius: 6px 36px 6px 36px;
+  padding: 1.25rem;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
+  text-align: center;
+  
   img {
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-
-  .ProductName {
-    font-family: 'Baloo 2',cursive;
-    font-size: 1.25rem;
-    line-height: 1.3;
-    color: ${props => props.theme.colors['base-subtitle']};
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-
-  .ProductDescription {
-    font-family: 'Roboto',cursive;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.3;
-    
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 0.5rem 1.25rem 0 0.5rem ;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-top: -1.25rem;
   }
 `;
 
 export const Tags = styled.div`
-  font-style: bold;
-  font-size: 0.625rem;
-  line-height: 1.3;
-  color: ${props => props.theme.colors['brand-yellow-dark']};
-  background: ${props => props.theme.colors['brand-yellow-light']};
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  gap: 4px;
 
-  height: 1.2rem;
-  border-radius: 8px;
-  padding: .2rem;
-  margin-top: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  span {
+    color: ${props => props.theme.colors['brand-yellow-dark']};
+    background: ${props => props.theme.colors['brand-yellow-light']};
+    font-size: ${(props) => props.theme.textSizes["components-tag"]};
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: .25rem .5rem;
+    font-weight: 700;
+  }
+`;
+
+export const Name = styled(TitleText).attrs({
+  size: "s",
+  color: "subtitle",
+})`
+  font-weight: 700;
+  margin-bottom: .5rem;
+`;
+
+export const Description = styled(RegularText).attrs({
+  size: "s",
+  color: "label",
+})`
+  margin-bottom: 2rem;
 `;
 
 export const ProductPriceAndButton = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-
-  .ProductPrice {
-    font-family: 'Baloo 2',cursive;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    color: ${props => props.theme.colors['base-subtitle']};
-
-    margin-right: 1.5rem;
-  }
-
-  .ProductsToCart {
+  justify-content: space-between;
+  
+  > div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 3px;
     
-    width: 4.5rem;
-    height: 2.375rem;
-    border-radius: 6px;
-    background: ${props => props.theme.colors['base-button']};
-  }
-
-  .ProductQuantity {
-    flex: 1;
-    background: ${props => props.theme.colors['base-button']};
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    text-align: center;
-    width: 100%;
-    border: none;
-  }
-
-  .ProductMinusButton,
-  .ProductAddButton {
-    border: 0;
-    background: ${props => props.theme.colors['base-button']};
-    cursor: pointer;
-
-    width: 1.8rem;
-    height: 2.375rem;
-    
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    border-radius: 6px;
-  }
-
-  .ShoppingCartCard {
-    background: ${props => props.theme.colors['brand-purple-dark']};
-    border: 0;
-    border-radius: 6px;
-    margin-left: .5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 2.375rem;
-    height: 2.375rem;
+    p {
+      line-height: 0.75rem;
+    }
   }
 `;
 
-export const ProductQuantity = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  width: 4.5rem;
-  height: 2.375rem;
-
-  border: 0;
-  border-radius: 6px;
-  background: ${props => props.theme.colors['base-button']};
-
-  margin: 1rem;
+export const AddCartWrapper = styled.div`
+  width: 7.5rem;
+  
+  > button {
+    width: 2.375rem;
+    height: 2.375rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${({ theme }) => theme.colors["brand-purple-dark"]};
+    color: ${({ theme }) => theme.colors["base-card"]};
+    border-radius: 6px;
+    margin-left: 0.3rem;
+    transition: 0.4s;
+    
+    &:hover {
+      background: ${({ theme }) => theme.colors["brand-purple"]};
+    }
+  }
 `;

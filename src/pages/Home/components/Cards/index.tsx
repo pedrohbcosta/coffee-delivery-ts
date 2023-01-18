@@ -1,9 +1,8 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react';
-import { useState } from 'react';
-import { useQuery } from 'react-query';
+import { ShoppingCart } from 'phosphor-react';
 import { formatCurrency } from '../../../../components/formatCurrency';
-import { coffees } from '../../../../data/coffees';
-import { CardContainer, ProductPriceAndButton, Tags } from './styles';
+import { QuantityInput } from '../../../../components/QuantityInput';
+import { RegularText, TitleText } from '../../../../components/Typograph';
+import { CardContainer, Name, Description, ProductPriceAndButton, Tags, AddCartWrapper } from './styles';
 
 export interface Coffee {
   id: number;
@@ -19,32 +18,9 @@ interface CardsContainerProps {
   coffee: Coffee
 }
 
-
-
-
 export function CardsContainer( { coffee }: CardsContainerProps) {
 
-  const [ cartItem, setCartItem ] = useState([])
-
-  const cartQuantity = cartItem.length
-
-  // function handleAddToCart(coffeeID: number) {
-  //   // const newAdd = coffees.find((coffee) => coffee.id)
-  //   const allCoffes = coffees.map(( coffee ) => {
-  //     if (coffee.id === coffeeID) {
-  //       return {
-  //         ...coffee
-  //       }
-  //     }
-  //     return coffee.id;
-  //   })
-
-  //   const newAdd = allCoffes
-
-  //   setCartItem([/*...cartItem,*/ newAdd]);
-  //   // console.log(cartItem)
-  //   console.log(newAdd)
-  // };
+  const formattedPrice = formatCurrency(coffee.price);
 
   return (
     <CardContainer>
@@ -55,34 +31,24 @@ export function CardsContainer( { coffee }: CardsContainerProps) {
           <span key={`${coffee.id}${tag}`}>{tag}</span>
         ))}
       </Tags>
-      <h1 className='ProductName'>{coffee.name}</h1>
-      <p className='ProductDescription'>{coffee.description}</p>
+
+      <Name>{coffee.name}</Name>
+      <Description>{coffee.description}</Description>
+      
       <ProductPriceAndButton>
-        <p className='ProductPrice'>{formatCurrency(coffee.price)}</p> 
+        <div>
+          <RegularText size="s">R$</RegularText>
+          <TitleText size="m" color="text" as="strong">
+            {formattedPrice}
+          </TitleText>
+        </div> 
         
-          <div className='ProductsToCart'>
-            <button className='ProductMinusButton'>
-              <Minus size={12} color="#8047f8" weight="bold" />
-            </button>
-
-            <input 
-              className='ProductQuantity' 
-              type="number" 
-              readOnly 
-              value={1}
-            />{cartQuantity}
-
-            <button 
-              key={coffee.id}
-              // onClick={handleAddToCart} 
-              className='ProductAddButton'>
-                <Plus size={12} color="#8047f8" weight="bold" />
-            </button> 
-          </div>
-        
-          <button type='submit' className='ShoppingCartCard'>
-            <ShoppingCart size={22} color="#ffffff" weight="fill" />
+        <AddCartWrapper>
+          <QuantityInput/>
+          <button>
+            <ShoppingCart weight="fill" size={22} />
           </button>
+        </AddCartWrapper>
         
       </ProductPriceAndButton>
     </CardContainer>

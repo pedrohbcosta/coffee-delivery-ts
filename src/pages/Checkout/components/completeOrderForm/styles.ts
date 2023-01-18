@@ -1,16 +1,26 @@
 import styled from "styled-components";
+import { SectionBaseStyle } from "../../styles";
 
-export const FormContainerTitle = styled.p`
-  font-family: ${(props) => props.theme.fonts['title']};
-  font-size: ${(props) => props.theme.textSizes['title-title-xs']};
-  margin-bottom: 0.93rem;
+export const CompleteOrderFormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  width: 40rem;
 `;
 
-export const FormContainer = styled.form`
-  width: 40rem;
-  background: ${(props) => props.theme.colors['base-card']};
-  padding: 2.5rem;
-  border-radius: 6px;
+export const FormContainer = styled(SectionBaseStyle)`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const AddressFormContainer = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 12.5rem 17.25rem 3.75rem;
+  column-gap: .75rem;
+  row-gap: 1rem;
+  grid-auto-flow: dense;
 `;
 
 export const FormHeader = styled.div`

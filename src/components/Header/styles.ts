@@ -7,6 +7,11 @@ export const HeaderContainer = styled.header`
   background: ${(props) => props.theme.colors['base-background']};
   height: 6.5rem;
   width: 100%;
+  
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
 
   > div {
     display: flex;

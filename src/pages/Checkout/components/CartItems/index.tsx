@@ -1,4 +1,4 @@
-import { SelectedCoffees } from "./components/CartCard";
+import { SelectedCoffees } from "./components/SelectedCoffees";
 import { CartItemsContainer, CartItemsContainerTitle } from "./styles";
 
 export function CartItems() {

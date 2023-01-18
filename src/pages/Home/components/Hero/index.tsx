@@ -1,7 +1,20 @@
-import { ShoppingCart, Package, Timer, Coffee } from "phosphor-react";
-import { BulletsContainer, HeroContainer, HeroContent, HeroTitle } from "./styles";
 import HeroCoffee from "../../../../assets/HeroCoffee.svg" ;
 import { RegularText } from "../../../../components/Typograph";
+
+import { 
+  ShoppingCart, 
+  Package, 
+  Timer, 
+  Coffee 
+} from "phosphor-react";
+
+import { 
+  BulletsContainer, 
+  HeroContainer, 
+  HeroContent, 
+  HeroTitle 
+} from "./styles";
+
 import { BulletsIcon } from "../../../../components/BulletsIcon";
 import { useTheme } from "styled-components";
 
