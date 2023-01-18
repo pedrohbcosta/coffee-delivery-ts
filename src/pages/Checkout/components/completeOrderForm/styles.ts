@@ -21,9 +21,20 @@ export const AddressFormContainer = styled.div`
   column-gap: .75rem;
   row-gap: 1rem;
   grid-auto-flow: dense;
+
+  .cep {
+    grid-column: span 3;
+    max-width: 12.5rem;
+  }
+
+  .street {
+    grid-column: span 3;
+  }
+
+  .complement {
+    grid-column: span 2;
+  }
 `;
-
-
 
 const BaseInput = styled.input`
   margin-bottom: 1rem;
@@ -37,42 +48,6 @@ const BaseInput = styled.input`
   &:focus {
     border: 1px solid ${(props) => props.theme.colors['brand-yellow-dark']};
   }
-`;
-
-export const CepInput = styled(BaseInput) `
-  display: block;
-  margin-bottom: 1rem;
-`;
-
-export const StreetInput = styled(BaseInput)`
-  display: block;
-  width: 100%;
-`;
-
-export const NumberInput = styled(BaseInput)`
-  width: 12.5rem;
-  margin-right: .75rem;
-`;
-
-export const ComplementInput = styled(BaseInput)`
-  width: 21.75rem;
-`; 
-
-export const LocalInput = styled(BaseInput)`
-  width: 12.5rem;
-  margin-right: .75rem;
-  margin-bottom: 0;
-`;
-
-export const CityInput = styled(BaseInput)`
-  width: 17.25rem;
-  margin-right: .75rem;
-  margin-bottom: 0;
-`;
-
-export const StateInput = styled(BaseInput)`
-  width: 3.75rem;
-  margin-bottom: 0;
 `;
 
 export const PaymentContainer = styled.div`

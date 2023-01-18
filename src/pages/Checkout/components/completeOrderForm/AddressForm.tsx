@@ -1,15 +1,16 @@
+import { Input } from "../../../../components/Input";
 import { AddressFormContainer } from "./styles";
 
 export function AddressForm() {
   return (
     <AddressFormContainer>
-      <input placeholder="CEP" type="number" className="cep"/>
-      <input placeholder="Rua" className="street"/>
-      <input placeholder="Número" type="number" />
-      <input placeholder="Complemento" className="complement"/>
-      <input placeholder="Bairro" />
-      <input placeholder="Cidade" />
-      <input placeholder="UF" />
+      <Input placeholder="CEP" type="number" className="cep"/>
+      <Input placeholder="Rua" className="street"/>
+      <Input placeholder="Número" type="number" />
+      <Input placeholder="Complemento" className="complement"/>
+      <Input placeholder="Bairro" />
+      <Input placeholder="Cidade" />
+      <Input placeholder="UF" />
     </AddressFormContainer>
   )
 }

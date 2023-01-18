@@ -36,4 +36,8 @@ export const GlobalStyle = createGlobalStyle`
     -moz-appearance: textfield;
   }
 
+  :focus {
+    outline: transparent;
+  }
+
 `
