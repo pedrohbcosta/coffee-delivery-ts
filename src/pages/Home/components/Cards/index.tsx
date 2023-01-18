@@ -28,23 +28,23 @@ export function CardsContainer( { coffee }: CardsContainerProps) {
 
   const cartQuantity = cartItem.length
 
-  function handleAddToCart(coffeeID: number) {
-    // const newAdd = coffees.find((coffee) => coffee.id)
-    const allCoffes = coffees.map(( coffee ) => {
-      if (coffee.id === coffeeID) {
-        return {
-          ...coffee
-        }
-      }
-      return coffee.id;
-    })
+  // function handleAddToCart(coffeeID: number) {
+  //   // const newAdd = coffees.find((coffee) => coffee.id)
+  //   const allCoffes = coffees.map(( coffee ) => {
+  //     if (coffee.id === coffeeID) {
+  //       return {
+  //         ...coffee
+  //       }
+  //     }
+  //     return coffee.id;
+  //   })
 
-    const newAdd = allCoffes
+  //   const newAdd = allCoffes
 
-    setCartItem([/*...cartItem,*/ newAdd]);
-    // console.log(cartItem)
-    console.log(newAdd)
-  };
+  //   setCartItem([/*...cartItem,*/ newAdd]);
+  //   // console.log(cartItem)
+  //   console.log(newAdd)
+  // };
 
   return (
     <CardContainer>
@@ -74,7 +74,7 @@ export function CardsContainer( { coffee }: CardsContainerProps) {
 
             <button 
               key={coffee.id}
-              onClick={handleAddToCart} 
+              // onClick={handleAddToCart} 
               className='ProductAddButton'>
                 <Plus size={12} color="#8047f8" weight="bold" />
             </button> 

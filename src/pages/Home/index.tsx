@@ -1,9 +1,11 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react';
+import { useTheme } from 'styled-components';
 import HeroCoffee from '../../assets/HeroCoffee.svg';
+import { BulletsIcon } from '../../components/BulletsIcon';
 import { coffees } from '../../data/coffees';
 
-
 import { CardsContainer } from './components/Cards';
+import { Hero } from './components/Hero';
 
 import { 
   BulletsSection, 
@@ -16,21 +18,23 @@ import {
 
 export function Home() {
   
+  
   // const getProducts = storeItems
   
   // const { data } = useQuery('products', getProducts)
 
 
   return (
-    <HomeContainer>
-      <div className='container'>
-        <HeroSection>
+    <HomeContainer className='container'>
+      
+        {/* <HeroSection>
           <HeroSectionText>
             <h1>Encontre o café perfeito para qualquer hora do dia</h1>
             <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
             
             <BulletsSection>
               <ul>
+                
                 <li 
                 className='ShoppingCart'><ShoppingCart 
                 color="#ffffff" 
@@ -66,7 +70,9 @@ export function Home() {
           </HeroSectionText>
           
           <img src={ HeroCoffee } alt="" />
-        </HeroSection>
+        </HeroSection> */}
+
+        <Hero/>
 
         <MainSection>
           <h1>Nossos cafés</h1>
@@ -83,7 +89,7 @@ export function Home() {
           </ProductsContainer>
         
         </MainSection>
-      </div>
+      
     </HomeContainer>
   )
 }

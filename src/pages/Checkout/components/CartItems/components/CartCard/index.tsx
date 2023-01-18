@@ -1,13 +1,13 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { formatCurrency } from "../../../../../../components/formatCurrency";
-import { CartCardContainer } from "./styles";
+import { SelectedCoffeesContainer } from "./styles";
 
 
 
-export function CartCard() {
+export function SelectedCoffees() {
   return (
-    <CartCardContainer>
+    <SelectedCoffeesContainer>
       
-    </CartCardContainer>
+    </SelectedCoffeesContainer>
   )
 }

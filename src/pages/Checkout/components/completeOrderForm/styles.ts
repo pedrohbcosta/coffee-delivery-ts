@@ -141,6 +141,8 @@ const BasePayment = styled.button`
     background: ${(props) => props.theme.colors['brand-purple-light']};
     border: 1px solid ${(props) => props.theme.colors['brand-purple']};
   }
+
+  user-select: none;
 `;
 
 export const CreditCardContainer = styled(BasePayment)`

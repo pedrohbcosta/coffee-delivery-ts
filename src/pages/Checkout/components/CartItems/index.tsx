@@ -1,4 +1,4 @@
-import { CartCard } from "./components/CartCard";
+import { SelectedCoffees } from "./components/CartCard";
 import { CartItemsContainer, CartItemsContainerTitle } from "./styles";
 
 export function CartItems() {
@@ -9,7 +9,7 @@ export function CartItems() {
       </CartItemsContainerTitle>
       
       <CartItemsContainer>
-        <CartCard />
+        <SelectedCoffees />
       </CartItemsContainer>
     </div>
   )
