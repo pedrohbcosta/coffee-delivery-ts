@@ -17,7 +17,10 @@ export function CoffeeCartCard() {
             </RemoveButton>
           </ActionContainer>
         </div>
+        
       </div>
+
+      <p>R$ 9,90</p>
     </CoffeeCartCardContainer>
   )
 }
