@@ -1,3 +1,4 @@
+import produce from "immer";
 import { createContext, ReactNode, useState } from "react";
 import { Coffee } from "../pages/Home/components/Cards";
 
@@ -7,6 +8,7 @@ export interface CartItem extends Coffee {
 
 interface CartContextType {
   cartItems: CartItem[];
+  addCoffeeToCart: (coffee: CartItem) => void;
 }
 
 interface CartContextProviderProps {
@@ -18,8 +20,24 @@ export const CartContext = createContext({} as CartContextType);
 export function CartContextProvider({ children }: CartContextProviderProps) {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
+  function addCoffeeToCart(coffee: CartItem) {
+    const coffeeAlreadyExist = cartItems.findIndex(
+      (cartItem) => cartItem.id === coffee.id
+    );
+    
+    const newCart = produce( cartItems, (draft) => {
+      if(coffeeAlreadyExist < 0) {
+        draft.push(coffee);
+      } else {
+        draft[coffeeAlreadyExist].quantity += coffee.quantity;
+      }
+    });
+
+    setCartItems(newCart);
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems }}>
+    <CartContext.Provider value={{ cartItems, addCoffeeToCart }}>
       { children }
     </CartContext.Provider>
   )
