@@ -34,7 +34,7 @@ export const coffees = [
   {
     "id": 5,
     "name": "Café com Leite",
-    "tags": ["Tradicional"],
+    "tags": ["Tradicional", "com Leite"],
     "description": "Meio a meio de expresso tradicional com leite vaporizado",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Cafe-com-Leite.svg"
@@ -42,7 +42,7 @@ export const coffees = [
   {
     "id": 6,
     "name": "Latte",
-    "tags": ["Tradicional"],
+    "tags": ["Tradicional", "com Leite"],
     "description": "Uma dose de café expresso com o dobro de leite e espuma cremosa",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Latte.svg"
@@ -50,7 +50,7 @@ export const coffees = [
   {
     "id": 7,
     "name": "Capuccino",
-    "tags": ["Tradicional"],
+    "tags": ["Tradicional", "com Leite"],
     "description": "Bebida com canela feita de doses iguais de café, leite e espuma",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Capuccino.svg"
@@ -58,7 +58,7 @@ export const coffees = [
   {
     "id": 8,
     "name": "Macchiato",
-    "tags": ["Tradicional"],
+    "tags": ["Tradicional", "com Leite"],
     "description": "Café expresso misturado com um pouco de leite quente e espuma",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Macchiato.svg"
@@ -66,7 +66,7 @@ export const coffees = [
   {
     "id": 9,
     "name": "Mocaccino",
-    "tags": ["Tradicional"],
+    "tags": ["Tradicional", "com Leite"],
     "description": "Café expresso com calda de chocolate, pouco leite e espuma",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Mocaccino.svg"
@@ -74,7 +74,7 @@ export const coffees = [
   {
     "id": 10,
     "name": "Chocolate Quente",
-    "tags": ["Tradicional"],
+    "tags": ["Tradicional", "com Leite"],
     "description": "Bebida feita com chocolate dissolvido no leite quente e café",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Chocolate-Quente.svg"
@@ -82,7 +82,7 @@ export const coffees = [
   {
     "id": 11,
     "name": "Cubano",
-    "tags": ["Tradicional"],
+    "tags": ["Tradicional", "Alcoólico", "Gelado"],
     "description": "Drink gelado de café expresso com rum, creme de leite e hortelã",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Cubano.svg"
@@ -90,7 +90,7 @@ export const coffees = [
   {
     "id": 12,
     "name": "Havaiano",
-    "tags": ["Tradicional"],
+    "tags": ["Especial"],
     "description": "Bebida adocicada preparada com café e leite de coco",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Havaiano.svg"
@@ -98,7 +98,7 @@ export const coffees = [
   {
     "id": 13,
     "name": "Árabe",
-    "tags": ["Tradicional"],
+    "tags": ["Especial"],
     "description": "Bebida preparada com grãos de café árabe e especiarias",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Arabe.svg"
@@ -106,7 +106,7 @@ export const coffees = [
   {
     "id": 14,
     "name": "Irlandês",
-    "tags": ["Tradicional"],
+    "tags": ["Especial", "Alcoólico"],
     "description": "Bebida a base de café, uísque irlandês, açúcar e chantilly",
     "price": 9.90,
     "imgUrl": "src/pages/Home/components/Cards/assets/Irlandes.svg"
