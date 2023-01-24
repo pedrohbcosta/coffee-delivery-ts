@@ -5,18 +5,31 @@ import * as zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
 
-const confirmOrderValidation = zod.object({
-  cep: zod.string(),
+const confirmOrderValidationSchema = zod.object({
+  cep: zod.string().min(1, 'Informe o CEP'),
 })
 
+export type OrderData = zod.infer<typeof confirmOrderValidationSchema>
+
+type CheckoutFormData = OrderData;
+
 export function Checkout() {
-  const checkoutForm = useForm({
-    resolver: zodResolver(confirmOrderValidation)
+  const checkoutForm = useForm<CheckoutFormData>({
+    resolver: zodResolver(confirmOrderValidationSchema)
   });
+
+  const { handleSubmit } = checkoutForm;
+
+  function handleConfirmOrder(data: CheckoutFormData) {
+    console.log(data)
+  }
 
   return (
     <FormProvider {...checkoutForm}>
-      <CheckoutContainer className="container">
+      <CheckoutContainer 
+        className="container" 
+        onSubmit={handleSubmit(handleConfirmOrder)}
+      >
         <CompleteOrderContainer/>
         <SelectedCoffees/>
       </CheckoutContainer>

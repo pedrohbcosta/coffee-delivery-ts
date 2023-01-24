@@ -30,7 +30,7 @@ export function ConfirmationSection() {
       <RegularText>R$ {formattedcartTotal}</RegularText>
     </div>
     
-    <ConfirmationButton text={"confirmar pedido"} disabled={cartQuantity <= 0} />
+    <ConfirmationButton text={"confirmar pedido"} disabled={cartQuantity <= 0} type="submit"/>
   </ConfirmationSectionContainer>
   ) 
 }
