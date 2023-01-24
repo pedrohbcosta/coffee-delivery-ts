@@ -43,52 +43,18 @@ export const PaymentContainer = styled.div`
   padding: 2.5rem;
 `;
 
+// export const PaymentTypesContainer = styled.div`
+//   display: flex;
+//   gap: 0.75rem;
+//   margin-top: 2rem;
+// `;
+
 export const PaymentTypesContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
-  margin-top: 2rem;
-`;
-
-const BasePayment = styled.button`
-  width: 11rem;
-  background: ${(props) => props.theme.colors['base-button']};
-  color: ${(props) => props.theme.colors['base-text']};
-  text-transform: uppercase;
-  border: 0;
-  border-radius: 6px;
-  padding: 0.75rem;
-  font-size: ${(props) => props.theme.textSizes['components-button-s']};
-
-  &:hover {
-    background: ${(props) => props.theme.colors['base-hover']};
-    color: ${(props) => props.theme.colors['base-subtitle']};
+  > p {
+    grid-column: span 3;
+    color: ${({ theme }) => theme.colors["base-error"]};
   }
-
-  &:focus {
-    background: ${(props) => props.theme.colors['brand-purple-light']};
-    border: 1px solid ${(props) => props.theme.colors['brand-purple']};
-  }
-
-  user-select: none;
-`;
-
-export const CreditCardContainer = styled(BasePayment)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-`;
-
-export const DebitCardContainer = styled(BasePayment)`
-display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-`;
-
-export const CashContainer = styled(BasePayment)`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.5rem;
 `;
