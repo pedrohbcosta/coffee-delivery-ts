@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const InputWrapper = styled.div` //To show the error input on screen
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  position: relative;
+
+  > p {
+    color: ${(props)=> props.theme.colors["base-error"]};
+  }
+`;
+
 export const InputStyleContainer = styled.input`
   height: 2.625rem;
   border-radius: 4px;
